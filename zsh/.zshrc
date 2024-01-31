@@ -154,8 +154,9 @@ alias tpr="trash-restore"
 alias grep='grep --color=always'
 
 # Directory Shortcuts.
-alias nvimdir='cd ~/.config/nvim/'
 alias dev='cd /mnt/seagate/dev/'
+alias dots='cd ~/.dotfiles/'
+alias nvimdir='cd ~/.config/nvim/'
 alias cppdir='cd /mnt/seagate/dev/C++/'
 alias zigdir='cd /mnt/seagate/dev/Zig/'
 alias csdir='cd /mnt/seagate/dev/C#/'

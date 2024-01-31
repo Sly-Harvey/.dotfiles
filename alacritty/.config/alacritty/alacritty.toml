@@ -92,7 +92,7 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 dynamic_padding = false
-opacity = 1.0
+opacity = 0.6
 startup_mode = "Maximized"
 
 [window.class]
