@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export BROWSER="firefox"
 
 # path+=("$HOME/.local/bin")
-export PATH="$PATH:${$(find $HOME/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
+# export PATH="$PATH:${$(find $HOME/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
 
 # lf icons
 export LF_ICONS="\

@@ -43,25 +43,25 @@ foreground = "0xc8c093"
 size = 11.5
 
 [font.bold]
-family = "JetBrainsMono NF Medium"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono NF Medium"
+family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono NF Medium"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono NF Medium"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-[[keyboard.bindings]]
-chars = "cd $(find /mnt/seagate/dev/ ~/.config/ /usr/ ~/.local/ ~/ -mindepth 1 -maxdepth 2 | fzf)\r"
-key = "F"
-mods = "Control"
+# [[keyboard.bindings]]
+# chars = "cd $(find /mnt/seagate/dev/ ~/.config/ /usr/ ~/.local/ ~/ -mindepth 1 -maxdepth 2 | fzf)\r"
+# key = "F"
+# mods = "Control"
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -90,10 +90,10 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 program = "/bin/zsh"
 
 [window]
-decorations = "none"
+decorations = "full"
 dynamic_padding = false
-opacity = 0.6
-startup_mode = "Windowed"
+opacity = 1.0
+startup_mode = "Maximized"
 
 [window.class]
 general = "Alacritty"
