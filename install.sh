@@ -24,7 +24,7 @@ if ! command -v stow &> /dev/null; then
     $package_manager "stow"
 fi
 
-echo "[git] Cloning submodules..."
+echo "GIT: Cloning submodules..."
 git submodule update --init
 
 set -e

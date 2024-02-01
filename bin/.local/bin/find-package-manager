@@ -10,6 +10,6 @@ osInfo[/etc/alpine-release]=apk
 for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
-        echo Package manager: ${osInfo[$f]}
+        echo ${osInfo[$f]}
     fi
 done
