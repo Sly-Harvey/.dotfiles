@@ -9,6 +9,7 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
         2> >(grep -v 'stow dir path relative to target' 1>&2) \
         2> >(grep -v 'stow dir is' 1>&2) \
         2> >(grep -v 'Processing tasks' 1>&2) \
+        2> >(grep -v 'did not exist to be unstowed' 1>&2) \
         2> >(grep -v 'firefox' 1>&2)
         # 2> >(grep -v 'UNLINK' 1>&2)
     # echo "[-] UNLINK :: $folder"
