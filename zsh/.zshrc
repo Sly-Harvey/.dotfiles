@@ -9,7 +9,7 @@ fi
 ZSH=$HOME/.oh-my-zsh/
 
 # Path to powerlevel10k theme
-source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/.powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
 plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting aliases z)
