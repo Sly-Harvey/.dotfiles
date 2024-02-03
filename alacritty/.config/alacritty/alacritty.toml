@@ -58,10 +58,10 @@ style = "Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-# [[keyboard.bindings]]
-# chars = "cd $(find /mnt/seagate/dev/ ~/.config/ /usr/ ~/.local/ ~/ -mindepth 1 -maxdepth 2 | fzf)\r"
-# key = "F"
-# mods = "Control"
+[[keyboard.bindings]]
+chars = "cd $(find /mnt/seagate/dev/ ~/.config/ /usr/ ~/.local/ ~/ -mindepth 1 -maxdepth 2 | fzf)\r"
+key = "F"
+mods = "Control"
 
 [[keyboard.bindings]]
 action = "Paste"

@@ -271,6 +271,7 @@ sof-firmware
 speedtest-cli
 spotify
 stacer-git
+starship
 steam
 stow
 sudo
