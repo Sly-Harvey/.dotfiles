@@ -29,7 +29,7 @@ git submodule update --init
 
 set -e
 # SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-DOT_FOLDERS="bin,alacritty,cava,dunst,gwe,hypr,kitty,lf,MangoHud,neofetch,ranger,rofi,swww,tmux,neovim,bash,zsh"
+DOT_FOLDERS="bin,waybar,swww,rofi,swaylock,hypr,alacritty,cava,dunst,gwe,kitty,lf,MangoHud,neofetch,ranger,tmux,neovim,bash,zsh"
 
 for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
     # echo "[+] SYMLINK :: $folder"
