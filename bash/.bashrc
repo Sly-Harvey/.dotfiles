@@ -125,6 +125,9 @@ alias tp="trash-put"
 alias tpr="trash-restore"
 alias grep='grep --color=always'
 
+# Nixos
+alias list-gens='sudo nix-env --list-generations --profile /nix/var/nix/profiles/system/'
+
 # Directory Shortcuts.
 alias dev='cd /mnt/seagate/dev/'
 alias dots='cd ~/.dotfiles/'
