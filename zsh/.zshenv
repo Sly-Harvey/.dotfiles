@@ -1,4 +1,5 @@
 # Defaults
+export ZDOTDIR="$HOME/.config/zsh"
 export EDITOR="nvim"
 export BROWSER="firefox"
 export XMONAD_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xmonad" # xmonad.hs is expected to stay here
