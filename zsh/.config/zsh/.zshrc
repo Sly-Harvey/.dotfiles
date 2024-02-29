@@ -167,6 +167,18 @@ function cbuild-mingw {
   make -C build-mingw
 }
 
+# Fuzzy find and list all neovim configs to select and start
+function vimc {
+  # Assumes all configs exist in directories named ~/.config/nvim-*
+  local config=$(fd --max-depth 1 --glob 'nvim*' ~/.config | fzf --prompt="Neovim Configs > " --height=~50% --layout=reverse --border --exit-0)
+ 
+  # If I exit fzf without selecting a config, don't open Neovim
+  [[ -z $config ]] && echo "No config selected" && return
+ 
+  # Open Neovim with the selected config
+  NVIM_APPNAME=$(basename $config) nvim $@
+}
+
 # Helpful aliases
 alias cls='clear'
 alias  l='eza -lh  --icons=auto' # long list
@@ -182,6 +194,7 @@ alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also t
 alias zshrc='nvim $ZDOTDIR/.zshrc'
 alias vc='code --disable-gpu' # gui code editor
 alias nv='nvim'
+alias nvd='NVIM_APPNAME=nvim-dev nvim'
 alias nf='neofetch'
 alias cp="cp -iv"
 alias mv="mv -iv"
@@ -191,11 +204,13 @@ alias mkd="mkdir -pv"
 alias tp="trash-put"
 alias tpr="trash-restore"
 alias grep='grep --color=always'
+alias nvimdev='NVIM_APPNAME=nvim-dev nvim'
 
 # Directory Shortcuts.
 alias dev='cd /mnt/seagate/dev/'
 alias dots='cd ~/.dotfiles/'
 alias nvimdir='cd ~/.config/nvim/'
+alias nvimdevdir='cd ~/.config/nvim-dev/'
 alias cppdir='cd /mnt/seagate/dev/C++/'
 alias zigdir='cd /mnt/seagate/dev/Zig/'
 alias csdir='cd /mnt/seagate/dev/C#/'
