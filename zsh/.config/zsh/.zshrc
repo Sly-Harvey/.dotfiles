@@ -207,6 +207,7 @@ alias grep='grep --color=always'
 alias nvimdev='NVIM_APPNAME=nvim-dev nvim'
 
 # Directory Shortcuts.
+alias down='cd ~/Downloads/'
 alias dev='cd /mnt/seagate/dev/'
 alias dots='cd ~/.dotfiles/'
 alias nvimdir='cd ~/.config/nvim/'
