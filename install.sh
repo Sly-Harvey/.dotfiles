@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "GIT: Cloning submodules..."
+git submodule update --init
+
 # Find package manager
 if command -v brew &> /dev/null; then
     package_manager="brew install"
@@ -24,8 +27,11 @@ if ! command -v stow &> /dev/null; then
     $package_manager "stow"
 fi
 
-echo "GIT: Cloning submodules..."
-git submodule update --init
+# Install superuser configs
+sudo cp -r ./system/auto/sddm-astronaut-theme /usr/share/sddm/themes
+sudo cp -r ./system/auto/catppuccin-macchiato-mauve-compact /usr/share/themes
+sudo cp -r ./system/auto/Tokyonight-Dark-BL-LB /usr/share/themes
+sudo cp -r ./system/auto/Tokyonight-Light-B-LB /usr/share/themes
 
 set -e
 # SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
