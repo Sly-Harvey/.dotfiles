@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DOT_FOLDERS=*/
-
-for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
-    stow -D -v -t $HOME $folder -v \
+for folder in configs/*; do
+    stow -D -v -t $HOME $folder \
         2> >(grep -v 'BUG in find_stowed_path? Absolute/relative mismatch' 1>&2) \
         2> >(grep -v 'Planning unstow of package' 1>&2) \
         2> >(grep -v 'stow dir path relative to target' 1>&2) \
